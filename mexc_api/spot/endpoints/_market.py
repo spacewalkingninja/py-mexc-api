@@ -84,7 +84,7 @@ class _Market:
             "startTime": start_ms,
             "endTime": end_ms,
         }
-        return self.api.send_request(Method.GET, "/api/v3/klines", params)
+        return self.api.send_request(Method.GET, "/api/v3/klines", params, True)
 
     def avg_price(self, symbol: str) -> dict:
         """Returns the average price of a symbol."""
